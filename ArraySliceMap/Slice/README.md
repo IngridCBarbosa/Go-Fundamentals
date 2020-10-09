@@ -21,26 +21,33 @@ func main() {
 ## Os três componentes do slice
 
  * __Ponteiro__
+    
     O ponteiro é utilizado para apontar o primeiro elemento de um array que é acessível pelo slice.
     Aqui não é necessário que o ponteiro aponte para o primeiro elemento do array.
+
 * __Length__
+    
     Lenght é o numero total de elementos presento no array.
+
 * __Capacity__
+    
     Capacidade é o tamanho máximo que ele pode expandir. (É a memória que o array vai alocar).
 
 ## Como criar e inicializar o slice ?
 
  * __Usando Slice literal__
-    Você pode criar um slice usando o slice literal. A criação do slice literal é como a do array literal,
-    porém com uma diferença, não é permitido especificar o tamanho do slice nas chaves [].
+    
+      Você pode criar um slice usando o slice literal. A criação do slice literal é como a do array literal,
+      porém com uma diferença, não é permitido especificar o tamanho do slice nas chaves [].
 
-    ```go
-        var sliceLiteral = []string{"This","is", "slice","literal"}
-    ```
+      ```go
+          var sliceLiteral = []string{"This","is", "slice","literal"}
+      ```
  * __Usando um array__
-    O slice é uma referencia do array, então podemos criar um slice de um dado array. Para criar o slice de um
-    dado array primeiro temos que especificar [low:upper], que significa que o slice pode pegar os elementos começando 
-    pelo lower até o upper. NÃO INCLUI O ELEMENTO UPPER.
+    
+      O slice é uma referencia do array, então podemos criar um slice de um dado array. Para criar o slice de um
+      dado array primeiro temos que especificar [low:upper], que significa que o slice pode pegar os elementos começando 
+      pelo lower até o upper. NÃO INCLUI O ELEMENTO UPPER.
     
     ```go
         array := [4]int{1, 2, 3, 4}
