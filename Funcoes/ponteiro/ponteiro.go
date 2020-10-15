@@ -18,10 +18,10 @@ func inc2(n *int) {
 func main() {
 	n := 1
 
-	inc1(n) // cópia do valor
+	inc1(n) // cópia do valor => PASSAGEM POR VALOR
 	fmt.Println(n)
 
 	// & USADO PARA OBTER O ENDEREÇO DA VARIÁVEL
 	inc2(&n)
-	fmt.Println(n) // PASSANDO O VALOR POR REFERÊNCIA
+	fmt.Println(n) // PASSANDO O VALOR POR REFERÊNCIA => PASSAGEM POR REFERÊNCIA
 }
