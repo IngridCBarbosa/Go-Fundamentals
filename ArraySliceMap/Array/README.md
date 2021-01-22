@@ -84,7 +84,7 @@ Em go, os arrays podem ser declarados usando a declaração curta. É mais flex�
 
         novoArrayNumeros := numeros
         
-        novoArrayNumeros[0] = 500 // Essa mudana só afetará o array novoArrayNumeros
+        novoArrayNumeros[0] = 500 // Essa mudança só afetará o array novoArrayNumeros
     ```
 
 * Se o tipo do elementos do array é comparável, então o tipo do array também é comparável. Logo podemos comparar dois arrays diretamente utilizando o operador **==**.
@@ -99,3 +99,24 @@ Em go, os arrays podem ser declarados usando a declaração curta. É mais flex�
         fmt.Println(array1 == array3) // false
         fmt.Println(array2== array3) // false
     ```
+
+## Fazendo cópia de  um array
+
+Em go não há uma função que faça uma copia de um array, mas essa cópia pode ser feita ao criar uma nova variável e passar o array por valor ou por referência.
+
+Qual a diferença ?
+        
+    Ao fazer uma cópia por valor, ao modificar o original por exemplo, o array cópia não será modificado, ou seja, as ações não terão reflexo uma na outra.
+
+    Ao fazer uma cópia por referência, ao modificar por exemplo, a cópia , o original também será modificado, ou seja, as ações são refletidas
+
+```go
+    original := [] int {1, 2, 3, 4}
+
+    // Cópia por valor 
+    arrCopia := original
+
+    // Cópia por referência
+    arrCopia := &original
+
+```
